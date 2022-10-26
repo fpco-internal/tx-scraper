@@ -1,0 +1,27 @@
+[package]
+name = "tx-scraper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "*", default-features = false, features = [
+    "rustls-tls",
+    "json",
+] }
+anyhow = "*"
+base64 = "*"
+chrono = { version = "*", features = ["serde"] }
+cosmos-sdk-proto = { path = "/home/shida/src/Git/cosmos-rust/cosmos-sdk-proto", features = [
+    "cosmwasm",
+] }
+futures = "*"
+# json = "*"
+once_cell = "*"
+phf = { version = "*", features = ["macros"] }
+serde = { version = "*", features = ["derive"] }
+serde-aux = "*"
+serde_json = "*"
+serde_with = "*"
+tokio = { version = "*", features = ["full"] }
+log = "*"
+env_logger = "*"
